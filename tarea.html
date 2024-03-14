@@ -11,27 +11,27 @@
     <br>
     <button onclick="verificarTexto()">Verificar</button>
     
-    <input value="" id="texto">hola </input>
+    <input value="" id="texto"></input>
     <br><br>
-    <label id='idtexto'>el texto</label>
+    <label id='idtexto'></label>
     <div id="mensaje" style="display: none; color: red; background-color: yellow;"></div>
     
     <script>
         function verificarTexto()
         {
         let inputTexto = document.getElementById("texto").value.trim();
-    
+        let mensajeDiv = document.getElementById("mensaje");
+
         if (inputTexto === "") {
-            let mensajeDiv = document.getElementById("mensaje");
             mensajeDiv.innerText = "Cargue algo por favor";
             mensajeDiv.style.display = "block";
         } else {
+            mensajeDiv.style.display="none"
             alert("Texto cargado: " + inputTexto);
             console.log("Texto cargado: " + inputTexto);
         }
     
         }
-        verificarTexto()
     </script>
     
     </body>
